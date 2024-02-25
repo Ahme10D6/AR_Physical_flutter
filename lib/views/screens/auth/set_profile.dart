@@ -191,7 +191,7 @@ class _UserDataPageState extends State<UserDataPage> {
                 ),
               ],
             ),
-            const SizedBox(height: 56,),
+            const SizedBox(height: 150,),
             // Back and continue buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

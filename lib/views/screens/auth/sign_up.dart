@@ -74,7 +74,7 @@ class SignupScreen extends StatelessWidget {
               ),
               // ignore: prefer_const_constructors
               SizedBox(
-                height: 10,
+                height: 30,
               ),
               // ignore: avoid_unnecessary_containers, sized_box_for_whitespace
               Container(
@@ -88,7 +88,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               // ignore: avoid_unnecessary_containers, sized_box_for_whitespace
               Container(
@@ -102,7 +102,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               // ignore: avoid_unnecessary_containers, sized_box_for_whitespace
               Container(
@@ -116,7 +116,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 30,
               ),
               // ignore: avoid_unnecessary_containers, sized_box_for_whitespace
               Container(
@@ -130,7 +130,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 36,
+                height: 56,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
