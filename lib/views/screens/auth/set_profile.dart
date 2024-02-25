@@ -1,7 +1,9 @@
+// ignore_for_file: avoid_unnecessary_containers, prefer_final_fields
 import 'package:flutter/material.dart';
 import 'package:flutter_application_69/constants.dart';
 //import 'package:numberpicker/numberpicker.dart';
 import 'package:flutter_application_69/views/screens/auth/sign_up.dart';
+import 'package:numberpicker/numberpicker.dart';
 
 class UserDataPage extends StatefulWidget {
   const UserDataPage({Key? key}) : super(key: key);
@@ -11,70 +13,188 @@ class UserDataPage extends StatefulWidget {
 }
 
 class _UserDataPageState extends State<UserDataPage> {
-  int age = 25;
-  int weight = 70;
-  int height = 175;
-
-  void updateAge(int newValue) {
-    setState(() {
-      age = newValue.clamp(10, 60); // Clamp value to the desired range
-    });
-  }
-
-  void updateWeight(int newValue) {
-    setState(() {
-      weight = newValue.clamp(10, 60);
-    });
-  }
-
-  void updateHeight(int newValue) {
-    setState(() {
-      height = newValue.clamp(100, 200); // Adjust range for height (100-200)
-    });
-  }
+  int _currentValueAge= 25;
+  int _weight = 70;
+  int _height = 175;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            // Title
-            Text(
-              'Tell Us About Yourself',
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
+            body: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.only(top: 58),
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              // ignore: prefer_const_constructors
+              Text(
+                'Tell us about your self',
+                style: const TextStyle(
+                  fontSize: 35,
+                  color: text,
+                  fontFamily: 'Katibeh',
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
             // Age section
-            const SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            const SizedBox(height: 70),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text('How Old Are You?'),
-                Text('$age'),
-                const SizedBox(width: 10.0), // Add space for scroll bar
-                Scrollbar(
-                  child: Slider(
-                    value: age.toDouble(),
-                    min: 10.0,
-                    max: 60.0,
-                    divisions: 50, // More divisions for finer control
-                    label: age.toString(),
-                    onChanged: (value) => updateAge(value.toInt()),
+                Container(
+                  child:  Text("How old are you ?  $_currentValueAge",
+                  style: const TextStyle(fontSize: 24),
                   ),
+                ),
+              const SizedBox(height: 15),
+                Stack(
+                  children: [
+                    Center(
+                      child: Positioned(
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: text,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                      ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        child: NumberPicker(
+                          itemWidth: 70,
+                          itemHeight: 50,
+                          textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
+                          selectedTextStyle: const TextStyle(fontSize: 34,fontWeight: FontWeight.w600,color: buttonColor,),
+                          itemCount: 5,
+                          axis: Axis.horizontal,
+                          minValue: 1,
+                          maxValue: 99,
+                          value: _currentValueAge,
+                          onChanged: (V){
+                            setState(() {
+                              _currentValueAge = V;
+                            }
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-
-            // Similar sections for weight and height
-            // Adjust min/max and label formatting as needed
-            // Back and continue buttons
-            const SizedBox(
-              height: 36,
+            /////////////////////////////
+            const SizedBox(height: 70),
+            // Width section
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  child:  Text("please select your Wieght in Kg  $_weight",
+                  style: const TextStyle(fontSize: 24),
+                  ),
+                ),
+              const SizedBox(height: 15),
+                Stack(
+                  children: [
+                    Center(
+                      child: Positioned(
+                        child: Container(
+                          width: 50,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: text,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                      ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        child: NumberPicker(
+                          itemWidth: 70,
+                          itemHeight: 50,
+                          textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
+                          selectedTextStyle: const TextStyle(fontSize: 34,fontWeight: FontWeight.w600,color: buttonColor,),
+                          itemCount: 5,
+                          axis: Axis.horizontal,
+                          minValue: 30,
+                          maxValue: 180,
+                          value: _weight,
+                          onChanged: (W){
+                            setState(() {
+                              _weight = W;
+                            }
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
+            /////////////////////////
+            const SizedBox(height: 70),
+            // Hight section
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  child:  Text("please select your hieght in cm $_height",
+                  style: const TextStyle(fontSize: 24),
+                  ),
+                ),
+              const SizedBox(height: 15),
+                Stack(
+                  children: [
+                    Center(
+                      child: Positioned(
+                        child: Container(
+                          width: 60,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: text,
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                      ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        child: NumberPicker(
+                          itemWidth: 70,
+                          itemHeight: 50,
+                          textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
+                          selectedTextStyle: const TextStyle(fontSize: 34,fontWeight: FontWeight.w500,color: buttonColor,),
+                          itemCount: 5,
+                          axis: Axis.horizontal,
+                          minValue: 120,
+                          maxValue: 290,
+                          value: _height,
+                          onChanged: (H){
+                            setState(() {
+                              _height = H;
+                            }
+                            );
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 56,),
+            // Back and continue buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              //mainAxisSize: MainAxisSize.min, // Adjust alignment as needed
               children: [
                 SizedBox(
                   width: 150.0,
@@ -141,6 +261,7 @@ class _UserDataPageState extends State<UserDataPage> {
           ],
         ),
       ),
+    ),
     );
   }
 }
