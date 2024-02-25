@@ -172,7 +172,7 @@ class _UserDataPageState extends State<UserDataPage> {
                           itemWidth: 70,
                           itemHeight: 50,
                           textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
-                          selectedTextStyle: const TextStyle(fontSize: 34,fontWeight: FontWeight.w500,color: buttonColor,),
+                          selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w500,color: buttonColor,),
                           itemCount: 5,
                           axis: Axis.horizontal,
                           minValue: 120,
