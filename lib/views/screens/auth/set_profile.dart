@@ -30,14 +30,14 @@ class _UserDataPageState extends State<UserDataPage> {
               Text(
                 'Tell us about your self',
                 style: const TextStyle(
-                  fontSize: 35,
+                  fontSize: 25,
                   color: text,
                   fontFamily: 'Katibeh',
                   fontWeight: FontWeight.w900,
                 ),
               ),
             // Age section
-            const SizedBox(height: 70),
+            const SizedBox(height: 50),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,7 +68,7 @@ class _UserDataPageState extends State<UserDataPage> {
                           itemWidth: 70,
                           itemHeight: 50,
                           textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
-                          selectedTextStyle: const TextStyle(fontSize: 34,fontWeight: FontWeight.w600,color: buttonColor,),
+                          selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: buttonColor,),
                           itemCount: 5,
                           axis: Axis.horizontal,
                           minValue: 1,
@@ -88,15 +88,15 @@ class _UserDataPageState extends State<UserDataPage> {
               ],
             ),
             /////////////////////////////
-            const SizedBox(height: 70),
+            const SizedBox(height: 50),
             // Width section
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  child:  Text("please select your Wieght in Kg  $_weight",
-                  style: const TextStyle(fontSize: 24),
+                  child:  Text("your Wieght in Kg  $_weight",
+                  style: const TextStyle(fontSize: 20),
                   ),
                 ),
               const SizedBox(height: 15),
@@ -120,7 +120,7 @@ class _UserDataPageState extends State<UserDataPage> {
                           itemWidth: 70,
                           itemHeight: 50,
                           textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
-                          selectedTextStyle: const TextStyle(fontSize: 34,fontWeight: FontWeight.w600,color: buttonColor,),
+                          selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: buttonColor,),
                           itemCount: 5,
                           axis: Axis.horizontal,
                           minValue: 30,
@@ -140,15 +140,15 @@ class _UserDataPageState extends State<UserDataPage> {
               ],
             ),
             /////////////////////////
-            const SizedBox(height: 70),
+            const SizedBox(height: 50),
             // Hight section
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  child:  Text("please select your hieght in cm $_height",
-                  style: const TextStyle(fontSize: 24),
+                  child:  Text("your hieght in cm $_height",
+                  style: const TextStyle(fontSize: 20),
                   ),
                 ),
               const SizedBox(height: 15),
@@ -191,7 +191,7 @@ class _UserDataPageState extends State<UserDataPage> {
                 ),
               ],
             ),
-            const SizedBox(height: 56,),
+            const SizedBox(height: 80,),
             // Back and continue buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
