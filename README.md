@@ -1,8 +1,11 @@
-# flutter_application_69
+# flutter_Physical_Therapy
 
-A new Flutter project.
+This is a flutter Augmanted reality application for my Graduatation. 
 
-## Getting Started
+## Overview
+this project is made for who's has A specific injury and they cannot go to an injury treatment center and this project aims to treat injuries that can be treated without surgical intervention or using medical equipment.
+
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
