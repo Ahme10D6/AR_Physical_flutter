@@ -49,38 +49,35 @@ class _UserDataPageState extends State<UserDataPage> {
                 ),
               const SizedBox(height: 15),
                 Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Center(
-                      child: Positioned(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: text,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                      ),
-                      ),
-                    ),
-                    Center(
+                    Positioned(
                       child: Container(
-                        child: NumberPicker(
-                          itemWidth: 70,
-                          itemHeight: 50,
-                          textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
-                          selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: buttonColor,),
-                          itemCount: 5,
-                          axis: Axis.horizontal,
-                          minValue: 1,
-                          maxValue: 99,
-                          value: _currentValueAge,
-                          onChanged: (V){
-                            setState(() {
-                              _currentValueAge = V;
-                            }
-                            );
-                          },
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: text,
+                          borderRadius: BorderRadius.circular(50),
                         ),
+                    ),
+                    ),
+                    Container(
+                      child: NumberPicker(
+                        itemWidth: 70,
+                        itemHeight: 50,
+                        textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
+                        selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: buttonColor,),
+                        itemCount: 5,
+                        axis: Axis.horizontal,
+                        minValue: 1,
+                        maxValue: 99,
+                        value: _currentValueAge,
+                        onChanged: (V){
+                          setState(() {
+                            _currentValueAge = V;
+                          }
+                          );
+                        },
                       ),
                     ),
                   ],
@@ -101,38 +98,35 @@ class _UserDataPageState extends State<UserDataPage> {
                 ),
               const SizedBox(height: 15),
                 Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Center(
-                      child: Positioned(
-                        child: Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: text,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                      ),
-                      ),
-                    ),
-                    Center(
+                    Positioned(
                       child: Container(
-                        child: NumberPicker(
-                          itemWidth: 70,
-                          itemHeight: 50,
-                          textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
-                          selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: buttonColor,),
-                          itemCount: 5,
-                          axis: Axis.horizontal,
-                          minValue: 30,
-                          maxValue: 180,
-                          value: _weight,
-                          onChanged: (W){
-                            setState(() {
-                              _weight = W;
-                            }
-                            );
-                          },
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: text,
+                          borderRadius: BorderRadius.circular(50),
                         ),
+                    ),
+                    ),
+                    Container(
+                      child: NumberPicker(
+                        itemWidth: 70,
+                        itemHeight: 50,
+                        textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
+                        selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w600,color: buttonColor,),
+                        itemCount: 5,
+                        axis: Axis.horizontal,
+                        minValue: 30,
+                        maxValue: 180,
+                        value: _weight,
+                        onChanged: (W){
+                          setState(() {
+                            _weight = W;
+                          }
+                          );
+                        },
                       ),
                     ),
                   ],
@@ -153,38 +147,35 @@ class _UserDataPageState extends State<UserDataPage> {
                 ),
               const SizedBox(height: 15),
                 Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Center(
-                      child: Positioned(
-                        child: Container(
-                          width: 60,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: text,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                      ),
-                      ),
-                    ),
-                    Center(
+                    Positioned(
                       child: Container(
-                        child: NumberPicker(
-                          itemWidth: 70,
-                          itemHeight: 50,
-                          textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
-                          selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w500,color: buttonColor,),
-                          itemCount: 5,
-                          axis: Axis.horizontal,
-                          minValue: 120,
-                          maxValue: 290,
-                          value: _height,
-                          onChanged: (H){
-                            setState(() {
-                              _height = H;
-                            }
-                            );
-                          },
+                        width: 60,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: text,
+                          borderRadius: BorderRadius.circular(50),
                         ),
+                    ),
+                    ),
+                    Container(
+                      child: NumberPicker(
+                        itemWidth: 70,
+                        itemHeight: 50,
+                        textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w400),
+                        selectedTextStyle: const TextStyle(fontSize: 30,fontWeight: FontWeight.w500,color: buttonColor,),
+                        itemCount: 5,
+                        axis: Axis.horizontal,
+                        minValue: 120,
+                        maxValue: 290,
+                        value: _height,
+                        onChanged: (H){
+                          setState(() {
+                            _height = H;
+                          }
+                          );
+                        },
                       ),
                     ),
                   ],
